@@ -57,3 +57,23 @@ const typed = new typed('multiple-text' =  {
 )
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".certificate-slider");
+    const certificates = Array.from(slider.children);
+
+    // Duplicate the certificates for smooth looping
+    certificates.forEach(cert => {
+        let clone = cert.cloneNode(true);
+        slider.appendChild(clone);
+    });
+
+    // Pause scrolling on hover
+    slider.addEventListener("mouseenter", () => {
+        slider.style.animationPlayState = "paused";
+    });
+
+    // Resume scrolling on mouse leave
+    slider.addEventListener("mouseleave", () => {
+        slider.style.animationPlayState = "running";
+    });
+});
