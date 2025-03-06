@@ -291,7 +291,7 @@ span{
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Two skill boxes per row by default */
+    grid-template-columns: repeat(2, 1fr); /* Two skill boxes per row by default */
     gap: 5rem; /* Adjust spacing between skill boxes */
     justify-content: center;
     align-items: center;
