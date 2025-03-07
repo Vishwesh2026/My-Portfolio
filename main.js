@@ -77,3 +77,17 @@ document.addEventListener("DOMContentLoaded", function () {
         slider.style.animationPlayState = "running";
     });
 });
+document.getElementById("read-more-btn").addEventListener("click", function(event) {
+    event.preventDefault();
+    var aboutText = document.getElementById("about-text");
+    
+    if (aboutText.style.maxHeight === "0px" || aboutText.style.maxHeight === "") {
+        aboutText.style.maxHeight = "500px"; /* Adjust this value based on content length */
+        aboutText.style.opacity = "1";
+        this.textContent = "Read Less";
+    } else {
+        aboutText.style.maxHeight = "0px";
+        aboutText.style.opacity = "0";
+        this.textContent = "Read More";
+    }
+});
